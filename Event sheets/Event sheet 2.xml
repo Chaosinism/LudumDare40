@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <variable constant="0" name="tutor" sid="382621170448613" static="0" type="number">0</variable>
+        <event-block sid="582854404033355">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="887830969821975" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="860849294837339" type="Audio" />
+                <action id="0" name="Play" sid="292068880381144" type="Audio">
+                    <param id="0" name="Audio file">Ld40</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-3</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="307861261093188">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="527017796684594" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Tutorial_button</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="591958341667818" type="System">
+                    <param id="0" name="Variable">tutor</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="209360608707770" type="tutorial" />
+                <action id="-9" name="Set value" sid="945677411148265" type="System">
+                    <param id="0" name="Variable">tutor</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="343172352844121">
+            <conditions>
+                <condition id="0" name="On click" sid="731156800588726" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="417307431932229" type="System">
+                    <param id="0" name="Variable">tutor</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Move to bottom" sid="738525180828559" type="tutorial" />
+                <action id="-9" name="Set value" sid="611048379959903" type="System">
+                    <param id="0" name="Variable">tutor</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="906861491531331">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="962436676777078" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">start_game</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="417026790784368" type="System">
+                    <param id="0" name="Variable">tutor</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="853455300513966" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="560518585241338" type="System" />
+                <action id="-2" name="Go to layout" sid="235206422073273" type="System">
+                    <param id="0" name="Layout">kk</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

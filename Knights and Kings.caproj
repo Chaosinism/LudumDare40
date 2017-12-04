@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Knights and Kings</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2gsyo6x2ftmbz</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Knight" sid="821069288755292">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="gX" sid="317610201671667" type="number" />
+                <instance-variable name="gY" sid="190286054008436" type="number" />
+                <instance-variable name="status" sid="865149295287090" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="426456430420854">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852340426635109" speed="7">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0.png">
+                        <collision-poly>
+                            <point x="0.275618" y="0.273684" />
+                            <point x="0.498233" y="0.0736842" />
+                            <point x="0.738516" y="0.259649" />
+                            <point x="0.75265" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.402827" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0b.png">
+                        <collision-poly>
+                            <point x="0.321555" y="0.319298" />
+                            <point x="0.498233" y="0.119298" />
+                            <point x="0.749117" y="0.249123" />
+                            <point x="0.784452" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.452297" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0c.png">
+                        <collision-poly>
+                            <point x="0.328622" y="0.326316" />
+                            <point x="0.498233" y="0.112281" />
+                            <point x="0.787986" y="0.210526" />
+                            <point x="0.805654" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.469965" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0d.png">
+                        <collision-poly>
+                            <point x="0.328622" y="0.326316" />
+                            <point x="0.498233" y="0.147368" />
+                            <point x="0.823322" y="0.175439" />
+                            <point x="0.812721" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.462898" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0c.png">
+                        <collision-poly>
+                            <point x="0.328622" y="0.326316" />
+                            <point x="0.498233" y="0.112281" />
+                            <point x="0.787986" y="0.210526" />
+                            <point x="0.805654" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.469965" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0b.png">
+                        <collision-poly>
+                            <point x="0.321555" y="0.319298" />
+                            <point x="0.498233" y="0.119298" />
+                            <point x="0.749117" y="0.249123" />
+                            <point x="0.784452" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.452297" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0.png">
+                        <collision-poly>
+                            <point x="0.275618" y="0.273684" />
+                            <point x="0.498233" y="0.0736842" />
+                            <point x="0.738516" y="0.259649" />
+                            <point x="0.75265" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.402827" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0e.png">
+                        <collision-poly>
+                            <point x="0.261484" y="0.259649" />
+                            <point x="0.498233" y="0.133333" />
+                            <point x="0.696113" y="0.301754" />
+                            <point x="0.731449" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.392226" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0f.png">
+                        <collision-poly>
+                            <point x="0.212014" y="0.210526" />
+                            <point x="0.498233" y="0.126316" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.710247" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.360424" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0g.png">
+                        <collision-poly>
+                            <point x="0.159011" y="0.157895" />
+                            <point x="0.498233" y="0.136842" />
+                            <point x="0.657244" y="0.340351" />
+                            <point x="0.69258" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.335689" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0f.png">
+                        <collision-poly>
+                            <point x="0.212014" y="0.210526" />
+                            <point x="0.498233" y="0.126316" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.710247" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.360424" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_0e.png">
+                        <collision-poly>
+                            <point x="0.261484" y="0.259649" />
+                            <point x="0.498233" y="0.133333" />
+                            <point x="0.696113" y="0.301754" />
+                            <point x="0.731449" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.97193" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.392226" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="active" pingpong="0" repeatcount="1" repeatto="0" sid="458960207476478" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_1.png">
+                        <collision-poly>
+                            <point x="0.257951" y="0.25614" />
+                            <point x="0.498233" y="0.045614" />
+                            <point x="0.759717" y="0.238596" />
+                            <point x="0.784452" y="0.498246" />
+                            <point x="0.756184" y="0.757895" />
+                            <point x="0.498233" y="0.996491" />
+                            <point x="0.240283" y="0.761404" />
+                            <point x="0.367491" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="attacking" pingpong="0" repeatcount="1" repeatto="0" sid="108909120020977" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\knight_1.png">
+                        <collision-poly>
+                            <point x="0.257951" y="0.25614" />
+                            <point x="0.498233" y="0.045614" />
+                            <point x="0.759717" y="0.238596" />
+                            <point x="0.784452" y="0.498246" />
+                            <point x="0.756184" y="0.757895" />
+                            <point x="0.498233" y="0.996491" />
+                            <point x="0.240283" y="0.761404" />
+                            <point x="0.367491" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="219002412842813">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Chessboard" sid="446753086436808">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="489624694543498" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\chessboard2.png">
+                        <image-point name="Imagepoint 1" x="0.4375" y="0.5625" />
+                        <image-point name="Imagepoint 2" x="0.4375" y="0.43625" />
+                        <image-point name="Imagepoint 3" x="0.56" y="0.5625" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Knight_movement" sid="676088685215408">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Knight_pattern" sid="419727348866632">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="503028013830349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\knight_pattern.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="King_movement" sid="531164285587600">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="King_pattern" sid="825562408884366">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937645893066048" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\king_pattern.png">
+                        <collision-poly>
+                            <point x="0.282" y="0.282" />
+                            <point x="0.5" y="0.234" />
+                            <point x="0.714" y="0.286" />
+                            <point x="0.772" y="0.5" />
+                            <point x="0.716" y="0.716" />
+                            <point x="0.5" y="0.764" />
+                            <point x="0.284" y="0.716" />
+                            <point x="0.236" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="King" sid="378780538218709">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="gX" sid="927107735787603" type="number" />
+                <instance-variable name="gY" sid="340997935907325" type="number" />
+                <instance-variable name="status" sid="295596616308417" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="594481142652149">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757301627055199" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_0d.png">
+                        <collision-poly>
+                            <point x="0.413428" y="0.410526" />
+                            <point x="0.498233" y="0.0421053" />
+                            <point x="0.590106" y="0.407018" />
+                            <point x="0.60424" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.954386" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.399293" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_0b.png" />
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_0c.png" />
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_0d.png" />
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" />
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" />
+                </animation>
+                <animation framecount="1" loop="0" name="active" pingpong="0" repeatcount="1" repeatto="0" sid="574973847804830" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_1.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="attacking" pingpong="0" repeatcount="1" repeatto="0" sid="587024426345061" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\king_1.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Castle" sid="558530738378854">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="gX" sid="888350434855069" type="number" />
+                <instance-variable name="gY" sid="989982069670516" type="number" />
+                <instance-variable name="status" sid="790445146000425" type="number" />
+                <instance-variable name="vh" sid="502088670157113" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="425710150360609">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="317638702422461" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\castle_0.png">
+                        <collision-poly>
+                            <point x="0.413428" y="0.410526" />
+                            <point x="0.498233" y="0.0421053" />
+                            <point x="0.590106" y="0.407018" />
+                            <point x="0.60424" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.954386" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.399293" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="active" pingpong="0" repeatcount="1" repeatto="0" sid="873825426942998" speed="9">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\castle_0.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="attacking" pingpong="0" repeatcount="1" repeatto="0" sid="952721753629679" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\castle_1.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bishop" sid="106506938745572">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="gX" sid="657785894357303" type="number" />
+                <instance-variable name="gY" sid="256283715064758" type="number" />
+                <instance-variable name="status" sid="376602116985249" type="number" />
+                <instance-variable name="step" sid="983238050975173" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="682441878045663">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650722373292238" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\bishop_0.png">
+                        <collision-poly>
+                            <point x="0.413428" y="0.410526" />
+                            <point x="0.498233" y="0.0421053" />
+                            <point x="0.590106" y="0.407018" />
+                            <point x="0.60424" y="0.498246" />
+                            <point x="0.731449" y="0.733333" />
+                            <point x="0.498233" y="0.954386" />
+                            <point x="0.261484" y="0.740351" />
+                            <point x="0.399293" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="active" pingpong="0" repeatcount="1" repeatto="0" sid="290737979845170" speed="9">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\bishop_0.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\bishop_0.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\bishop_0.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="attacking" pingpong="0" repeatcount="1" repeatto="0" sid="855988860956618" speed="5">
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.501754" original-source="C:\DIY\ld40_kk\image\bishop_1.png">
+                        <collision-poly>
+                            <point x="0.325088" y="0.322807" />
+                            <point x="0.498233" y="0.00701754" />
+                            <point x="0.678445" y="0.319298" />
+                            <point x="0.639576" y="0.498246" />
+                            <point x="0.759717" y="0.761404" />
+                            <point x="0.498233" y="0.989474" />
+                            <point x="0.236749" y="0.764912" />
+                            <point x="0.363958" y="0.498246" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Border" sid="132230025735879">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="425251838211654" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\border.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="150710833097674">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="explosion" sid="205049360014799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="31" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632883384667447" speed="40">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0026.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0027.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0028.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0029.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion0030.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="explosion2" sid="369253401384370">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="31" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822522697446175" speed="40">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0026.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0027.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0028.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0029.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\explosion_b0030.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="title" sid="164928229146792">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341963261709475" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\title.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start_game" sid="957497408008108">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="616752155415696" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\start_game.png">
+                        <collision-poly>
+                            <point x="0.126667" y="0.38" />
+                            <point x="0.5" y="0.31" />
+                            <point x="0.86" y="0.42" />
+                            <point x="0.873333" y="0.5" />
+                            <point x="0.87" y="0.61" />
+                            <point x="0.5" y="0.69" />
+                            <point x="0.126667" y="0.62" />
+                            <point x="0.136667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tutorial_button" sid="117734252163710">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814223541880262" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\tutorial.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.38" />
+                            <point x="0.76" y="0.5" />
+                            <point x="0.5" y="0.72" />
+                            <point x="0.263333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tutorial" sid="635058326303286">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641974631306218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\tutorial_page.png">
+                        <collision-poly>
+                            <point x="0.176042" y="0.312963" />
+                            <point x="0.822917" y="0.314815" />
+                            <point x="0.851042" y="0.5" />
+                            <point x="0.851042" y="0.735185" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.142708" y="0.746296" />
+                            <point x="0.142708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg" sid="942962741360291">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303324524274109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="963983820014735">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Level" sid="956193598242553">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Gameover" sid="377865903895817">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638769980112828" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\gameover.png">
+                        <image-point name="Imagepoint 1" x="0.428125" y="0.724074" />
+                        <collision-poly>
+                            <point x="0.176042" y="0.312963" />
+                            <point x="0.822917" y="0.314815" />
+                            <point x="0.851042" y="0.5" />
+                            <point x="0.851042" y="0.735185" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.142708" y="0.746296" />
+                            <point x="0.142708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Levelup" sid="782965268149274">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212182486564862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\DIY\ld40_kk\image\next0010.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>title.xml</layout>
+        <layout>kk.xml</layout>
+        <layout>units.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="1" />
+        <global-instance type="Audio" uid="19">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="kill.m4a" />
+        <file name="kill.ogg" />
+        <file name="move.m4a" />
+        <file name="move.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Ld40.m4a" />
+        <file name="Ld40.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

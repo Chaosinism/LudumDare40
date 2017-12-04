@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="game_over" sid="639588503116087" static="0" type="number">0</variable>
+        <variable constant="0" name="Level" sid="147886289352339" static="0" type="number">1</variable>
+        <variable constant="0" name="Score" sid="189565351248629" static="0" type="number">0</variable>
+        <variable constant="0" name="Rate" sid="325804630241223" static="0" type="number">0.05</variable>
+        <event-block sid="130040722962413">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="407581027003740" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="205882916152165" type="Knight_movement">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">2</param>
+                </action>
+                <action id="3" name="Set at XY" sid="135755350907763" type="Knight_movement">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="479211150257180" type="Knight_movement">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">-1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="915855051897613" type="Knight_movement">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">-2</param>
+                </action>
+                <action id="3" name="Set at XY" sid="355305152253203" type="Knight_movement">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">-2</param>
+                </action>
+                <action id="3" name="Set at XY" sid="433500876424768" type="Knight_movement">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">-1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="798479880411968" type="Knight_movement">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="942401411549676" type="Knight_movement">
+                    <param id="0" name="X">7</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="101914251219677">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="459258641698857" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Knight</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="187174026916695" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="718249800905784" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="395632061440382" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="306039072680652" type="Knight">
+                    <param id="0" name="Animation">&quot;active&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="309730202345467" type="Knight">
+                    <param id="0" name="Object">Knight_pattern</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="648738077409651">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="466031126103213" type="Knight" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="952525324116821" type="Knight" />
+                <action id="-10" name="Set value" sid="467573572497486" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Play" sid="703067446757875" type="Audio">
+                    <param id="0" name="Audio file">move</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="740258171079901">
+            <conditions>
+                <condition id="3" name="On button released" sid="778890082586515" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="784438568774459" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="344246813516912" type="Knight_pattern" />
+                <action id="-10" name="Set value" sid="412433616346528" type="Knight">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">min(max(Knight.gX+Knight_movement.At( floor(acos( (Mouse.X-Knight.X)/distance(Mouse.X,Mouse.Y,Knight.X,Knight.Y) )/45) ,0),1),8)</param>
+                </action>
+                <action id="-10" name="Set value" sid="565870549422494" type="Knight">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">min(max(Knight.gY+Knight_movement.At( floor(asin( (Mouse.Y-Knight.Y)/distance(Mouse.X,Mouse.Y,Knight.X,Knight.Y) )/45)+6,0),1),8)</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="442215137151931" type="Knight">
+                    <param id="0" name="X">202+50*Knight.gX</param>
+                    <param id="1" name="Y">15+50*Knight.gY</param>
+                </action>
+                <action id="-10" name="Set value" sid="478139945689472" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="808801141472802" type="Knight">
+                    <param id="0" name="Animation">&quot;attacking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="234522880403236">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="926772759822528" type="Knight" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="900298167632739" type="Knight">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="598240100050505" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="503114693233182" type="Knight">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="929842742944555" type="Knight">
+                    <param id="0" name="X">202+50*Knight.gX</param>
+                    <param id="1" name="Y">15+50*Knight.gY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="770978065078790">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="994099690611399" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">King</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="919843335026981" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="218991339611038" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="259866629828934" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="198286036411345" type="King">
+                    <param id="0" name="Animation">&quot;active&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="117591227761597" type="King">
+                    <param id="0" name="Object">King_pattern</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="552500187809759">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="461596153206156" type="King" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="299106547697501" type="King" />
+                <action id="-10" name="Set value" sid="548608415119446" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Play" sid="914727583408777" type="Audio">
+                    <param id="0" name="Audio file">move</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="292877667650914">
+            <conditions>
+                <condition id="3" name="On button released" sid="756223774280872" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="136674235941358" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="722289931426590" type="King_pattern" />
+                <action id="-10" name="Set value" sid="489029058786523" type="King">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">min(max(King.gX+round((Mouse.X-King.X)/35),King.gX-1,1),King.gX+1,8)</param>
+                </action>
+                <action id="-10" name="Set value" sid="525963112648282" type="King">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">min(max(King.gY+round((Mouse.Y-King.Y)/35),King.gY-1,1),King.gY+1,8)</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="522065686306512" type="King">
+                    <param id="0" name="X">202+50*King.gX</param>
+                    <param id="1" name="Y">15+50*King.gY</param>
+                </action>
+                <action id="-10" name="Set value" sid="579058552461097" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="928503616702140" type="King">
+                    <param id="0" name="Animation">&quot;attacking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="718148846187091">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="447970183778185" type="King" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="291801614690480" type="King">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="124141227851944" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="609475876607960" type="King">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="648131995062522" type="King">
+                    <param id="0" name="X">202+50*King.gX</param>
+                    <param id="1" name="Y">15+50*King.gY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="868618310017234">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="964709317534305" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="980433878142366" type="System">
+                    <param id="0" name="Object">Castle</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="727922926321908" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="781400990121670" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277168326961044">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="844680141575703" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="896069894164859" type="Castle">
+                    <param id="0" name="Animation">&quot;active&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="905799666245583">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="570507112817679" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="460320408700321" type="Castle">
+                    <param id="0" name="Animation">&quot;attacking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="585026771859879" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="223744263290919" type="Castle">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">Castle.vh&gt;0?(King.gY=Castle.gY?King.gX:(King.gX&gt;Castle.gX?Castle.gX+ceil(random(King.gX-Castle.gX)) : Castle.gX-ceil(random(Castle.gX-King.gX))) ) : Castle.gX</param>
+                </action>
+                <action id="-10" name="Set value" sid="949842084490147" type="Castle">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">Castle.vh&gt;0?Castle.gY : (King.gX=Castle.gX?King.gY:(King.gY&gt;Castle.gY?Castle.gY+ceil(random(King.gY-Castle.gY)) : Castle.gY-ceil(random(Castle.gY-King.gY))))</param>
+                </action>
+                <action id="-10" name="Set value" sid="232030507817872" type="Castle">
+                    <param id="0" name="Instance variable">vh</param>
+                    <param id="1" name="Value">1-Castle.vh</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="635415997416225" type="Castle">
+                    <param id="0" name="X">202+50*Castle.gX</param>
+                    <param id="1" name="Y">15+50*Castle.gY</param>
+                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="113536305912722" type="Castle" />
+                <action id="0" name="Play" sid="996632918647960" type="Audio">
+                    <param id="0" name="Audio file">move</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562443709776899">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="983061583546985" type="Castle" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="769919490444054" type="Castle">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="419990217869463" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="936103460371493" type="Castle">
+                    <param id="0" name="X">202+50*Castle.gX</param>
+                    <param id="1" name="Y">15+50*Castle.gY</param>
+                </action>
+                <action id="-8" name="Set angle" sid="572501611375536" type="Castle">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752479999576548">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="279616021135866" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="667253851519836" type="System">
+                    <param id="0" name="Object">Bishop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="628183178649414" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="485469471993764" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691274903654059">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="815966439461445" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="821713942363779" type="Bishop">
+                    <param id="0" name="Animation">&quot;active&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="954302210854538" type="Bishop">
+                    <param id="0" name="Instance variable">step</param>
+                    <param id="1" name="Value">ceil(random(4))</param>
+                </action>
+                <action id="-10" name="Set value" sid="350759742532379" type="Bishop">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">Bishop.gX+Bishop.step&gt;8?Bishop.gX-Bishop.step:(Bishop.gX-Bishop.step&lt;1?Bishop.gX+Bishop.step:(random(1)&gt;0.5?Bishop.gX-Bishop.step:Bishop.gX+Bishop.step))</param>
+                </action>
+                <action id="-10" name="Set value" sid="191524100445786" type="Bishop">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">Bishop.gY+Bishop.step&gt;8?Bishop.gY-Bishop.step:(Bishop.gY-Bishop.step&lt;1?Bishop.gY+Bishop.step:(random(1)&gt;0.5?Bishop.gY-Bishop.step:Bishop.gY+Bishop.step))</param>
+                </action>
+                <action id="-11" name="Add to" sid="933129656643786" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277351075626917">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="737889474980837" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="626049263163974" type="Bishop">
+                    <param id="0" name="Animation">&quot;attacking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="115895644476946" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="266629619404789" type="Bishop">
+                    <param id="0" name="X">202+50*Bishop.gX</param>
+                    <param id="1" name="Y">15+50*Bishop.gY</param>
+                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="660003058684116" type="Bishop" />
+                <action id="0" name="Play" sid="322606565706437" type="Audio">
+                    <param id="0" name="Audio file">move</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557466903466164">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="860069145562965" type="Bishop" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="492677572999869" type="Bishop">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="701028202870037" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="743721386271813" type="Bishop">
+                    <param id="0" name="X">202+50*Bishop.gX</param>
+                    <param id="1" name="Y">15+50*Bishop.gY</param>
+                </action>
+                <action id="-8" name="Set angle" sid="376128038236259" type="Bishop">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934233647890122">
+            <conditions>
+                <condition id="4" name="On finished" sid="270770282633125" type="explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="463392532605236" type="explosion" />
+            </actions>
+        </event-block>
+        <event-block sid="891171453420019">
+            <conditions>
+                <condition id="4" name="On finished" sid="949483875924879" type="explosion2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="810040238794542" type="explosion2" />
+            </actions>
+        </event-block>
+        <event-block sid="180871618770964">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="860375501511555" type="King">
+                    <param id="0" name="Object">Knight</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="246842537335872" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="681536898981625" type="King">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="719041158617064" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="289717577182505" type="King" />
+                <action id="-9" name="Set value" sid="892789752845690" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495175524935089">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="310302155971230" type="King">
+                    <param id="0" name="Object">King</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="926021375065723" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="656327215057685" type="King">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="989853611270683" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="963464661758934" type="King" />
+                <action id="-9" name="Set value" sid="522523529854976" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="506457334337061">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="750737224181243" type="King">
+                    <param id="0" name="Object">Bishop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="826792337522117" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="343189915167495" type="King">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="360004136123926" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="484221564783482" type="King" />
+                <action id="-9" name="Set value" sid="990984530900810" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821014134224206">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="860787310752770" type="King">
+                    <param id="0" name="Object">Castle</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="952134915446901" type="King">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="910781455206800" type="King">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="395372451288501" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="568233024349560" type="King" />
+                <action id="-9" name="Set value" sid="198625273643474" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="270387001132803">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="765366126901318" type="Knight">
+                    <param id="0" name="Object">Knight</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="453613567086723" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="379733542533761" type="Knight">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="578889017795770" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="692655249798456" type="Knight" />
+            </actions>
+        </event-block>
+        <event-block sid="353875720045600">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="582978836505967" type="Knight">
+                    <param id="0" name="Object">King</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="532899231855593" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="550166349655779" type="Knight">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="199143773554581" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="610591890798113" type="Knight" />
+            </actions>
+        </event-block>
+        <event-block sid="983411979085629">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="873544721496301" type="Knight">
+                    <param id="0" name="Object">Bishop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="504646535611789" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="986393604057708" type="Knight">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="302080005043701" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="135835271796031" type="Knight" />
+                <action id="-9" name="Destroy" sid="658067041893484" type="Bishop" />
+            </actions>
+        </event-block>
+        <event-block sid="243541235198255">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="531508907420152" type="Knight">
+                    <param id="0" name="Object">Castle</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="405442521792597" type="Knight">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="540261655968163" type="Knight">
+                    <param id="0" name="Object">explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="150765493520638" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="350481360436124" type="Knight" />
+                <action id="-9" name="Destroy" sid="247369740642459" type="Castle" />
+            </actions>
+        </event-block>
+        <event-block sid="208460246621446">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="774710785261456" type="Castle">
+                    <param id="0" name="Object">Knight</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="745144410271473" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="923282832048623" type="Castle">
+                    <param id="0" name="Object">explosion2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="855853860342648" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="100859015151838" type="Castle" />
+                <action id="-10" name="Add to" sid="375016420642377" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326764897236913">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="594344729125726" type="Castle">
+                    <param id="0" name="Object">King</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="417180888011392" type="Castle">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="790249815659094" type="Castle">
+                    <param id="0" name="Object">explosion2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="143046139815345" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="411613495311690" type="Castle" />
+                <action id="-10" name="Add to" sid="426763109362885" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="114859453405958">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="512518046114103" type="Bishop">
+                    <param id="0" name="Object">Knight</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="769160183235960" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="949243643762073" type="Bishop">
+                    <param id="0" name="Object">explosion2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="407101302676818" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="435558127496445" type="Bishop" />
+                <action id="-10" name="Add to" sid="434693162742034" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="464183348113332">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="314637864837966" type="Bishop">
+                    <param id="0" name="Object">King</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="730923228409438" type="Bishop">
+                    <param id="0" name="Instance variable">status</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="801410287253105" type="Bishop">
+                    <param id="0" name="Object">explosion2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="624026614879597" type="Audio">
+                    <param id="0" name="Audio file">kill</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="474753454551457" type="Bishop" />
+                <action id="-10" name="Add to" sid="113771573644830" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="735074931999349">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="612943131596987" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="643968490773002" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">random(1)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="376536105534481" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="112390498738563" type="Chessboard">
+                    <param id="0" name="Object">Bishop</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="142819098384489" type="Bishop">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">random(1)&lt;0.5?0:9</param>
+                </action>
+                <action id="-10" name="Set value" sid="298877526763871" type="Bishop">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">floor(random(8))+1</param>
+                </action>
+                <action id="-3" name="Set position" sid="846631545911361" type="Bishop">
+                    <param id="0" name="X">202+50*Bishop.gX</param>
+                    <param id="1" name="Y">15+50*Bishop.gY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512934519139377">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="773661382557676" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="681357055476529" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">random(1)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="596508315230797" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="446480056062678" type="Chessboard">
+                    <param id="0" name="Object">Bishop</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="205281425467419" type="Bishop">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">floor(random(8))+1</param>
+                </action>
+                <action id="-10" name="Set value" sid="740036787180754" type="Bishop">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">random(1)&lt;0.5?0:9</param>
+                </action>
+                <action id="-3" name="Set position" sid="583695972654442" type="Bishop">
+                    <param id="0" name="X">202+50*Bishop.gX</param>
+                    <param id="1" name="Y">15+50*Bishop.gY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="513854691898423">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="657412682536220" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="965698681969666" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">random(1)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="530264272307061" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="863510332487022" type="Chessboard">
+                    <param id="0" name="Object">Castle</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="337776845032725" type="Castle">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">random(1)&lt;0.5?0:9</param>
+                </action>
+                <action id="-10" name="Set value" sid="737193866800336" type="Castle">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">floor(random(8))+1</param>
+                </action>
+                <action id="-3" name="Set position" sid="449461779361053" type="Castle">
+                    <param id="0" name="X">202+50*Castle.gX</param>
+                    <param id="1" name="Y">15+50*Castle.gY</param>
+                </action>
+                <action id="-10" name="Set value" sid="287489451931791" type="Castle">
+                    <param id="0" name="Instance variable">vh</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="456862296529114">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="396701756492694" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="915393267725896" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">random(1)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="779210642425041" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="398650057363805" type="Chessboard">
+                    <param id="0" name="Object">Castle</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="604156911250947" type="Castle">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">floor(random(8))+1</param>
+                </action>
+                <action id="-10" name="Set value" sid="787249525696075" type="Castle">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">random(1)&lt;0.5?0:9</param>
+                </action>
+                <action id="-3" name="Set position" sid="194347275680622" type="Castle">
+                    <param id="0" name="X">202+50*Castle.gX</param>
+                    <param id="1" name="Y">15+50*Castle.gY</param>
+                </action>
+                <action id="-10" name="Set value" sid="501306054507707" type="Castle">
+                    <param id="0" name="Instance variable">vh</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="801908770402405">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="253874702907468" type="Score" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="618250622909655" type="Score">
+                    <param id="0" name="Text">Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="545098050795872">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="940483132973058" type="Level" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="870017861497138" type="Level">
+                    <param id="0" name="Text">Level</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="227538795591833">
+            <conditions>
+                <condition id="4" name="On finished" sid="420439808089237" type="explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="557197495034555" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="298565726040846" type="Gameover" />
+                <action id="-3" name="Set position" sid="369223995743319" type="Gameover">
+                    <param id="0" name="X">417</param>
+                    <param id="1" name="Y">210</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="564345792019513" type="Gameover">
+                    <param id="0" name="Object">Score</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="716703272508190" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556178775906212">
+            <conditions>
+                <condition id="3" name="On button released" sid="745366848714976" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="857456006197700" type="System">
+                    <param id="0" name="Variable">game_over</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="927634907995711" type="System">
+                    <param id="0" name="Layout">title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="775453936945673">
+            <conditions>
+                <condition id="4" name="On finished" sid="664427684413052" type="Levelup">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="124219285528520" type="Levelup" />
+            </actions>
+        </event-block>
+        <event-block sid="530057567366093">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="384442073215726" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="947342650318759" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="600883968726796" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="777959963331171" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="198479188717499">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="809383956343099" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="645329319220756" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="732715294072576" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="961987236156640" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="659047530508333">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="598858264544701" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">90</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="235356212376696" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="674786801124444" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="629238530073847" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="809160036166278">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="890022449862301" type="System" />
+                <condition id="-14" name="Compare variable" sid="586183735515630" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="529564255502094" type="Border">
+                    <param id="0" name="Object">Levelup</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="270044378257774" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Value">0.07</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="975753200137231" type="Chessboard">
+                    <param id="0" name="Object">King</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="979339307028011" type="King">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-10" name="Set value" sid="206946002990902" type="King">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-3" name="Set position" sid="598297845826425" type="King">
+                    <param id="0" name="X">202+50*King.gX</param>
+                    <param id="1" name="Y">15+50*King.gY</param>
+                </action>
+                <action id="-24" name="Move to top" sid="168647041896104" type="Levelup" />
+            </actions>
+        </event-block>
+        <event-block sid="365032221240177">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="690972339725655" type="System" />
+                <condition id="-14" name="Compare variable" sid="345904164662020" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="531501204599303" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="314587280991799" type="Chessboard">
+                    <param id="0" name="Object">King</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="468377619747539" type="King">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-10" name="Set value" sid="287189007934659" type="King">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-3" name="Set position" sid="735781829369565" type="King">
+                    <param id="0" name="X">202+50*King.gX</param>
+                    <param id="1" name="Y">15+50*King.gY</param>
+                </action>
+                <action id="-24" name="Move to top" sid="639443006669920" type="Levelup" />
+            </actions>
+        </event-block>
+        <event-block sid="680942777695626">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="872209687936003" type="System" />
+                <condition id="-14" name="Compare variable" sid="262256803197686" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="338841105227522" type="System">
+                    <param id="0" name="Variable">Rate</param>
+                    <param id="1" name="Value">0.14</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="319153401319528" type="Chessboard">
+                    <param id="0" name="Object">King</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="479501455761980" type="King">
+                    <param id="0" name="Instance variable">gX</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-10" name="Set value" sid="289259285247405" type="King">
+                    <param id="0" name="Instance variable">gY</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-3" name="Set position" sid="596505451025509" type="King">
+                    <param id="0" name="X">202+50*King.gX</param>
+                    <param id="1" name="Y">15+50*King.gY</param>
+                </action>
+                <action id="-24" name="Move to top" sid="398276945006685" type="Levelup" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
